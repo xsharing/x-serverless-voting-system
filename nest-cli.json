@@ -1,0 +1,39 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/x-serverless-voting-system/src",
+  "monorepo": true,
+  "root": "apps/x-serverless-voting-system",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/x-serverless-voting-system/tsconfig.app.json"
+  },
+  "projects": {
+    "x-serverless-voting-system": {
+      "type": "application",
+      "root": "apps/x-serverless-voting-system",
+      "entryFile": "main",
+      "sourceRoot": "apps/x-serverless-voting-system/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/x-serverless-voting-system/tsconfig.app.json"
+      }
+    },
+    "user-web": {
+      "type": "application",
+      "root": "apps/user-web",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-web/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-web/tsconfig.app.json"
+      }
+    },
+    "admin-web": {
+      "type": "application",
+      "root": "apps/admin-web",
+      "entryFile": "main",
+      "sourceRoot": "apps/admin-web/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/admin-web/tsconfig.app.json"
+      }
+    }
+  }
+}
