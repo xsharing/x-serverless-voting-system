@@ -1,0 +1,20 @@
+{
+  "name": "nest-next-example-advanced-ui",
+  "version": "1.0.0",
+  "description": "The UI portion of an advanced example using nest-next",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^10.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.7.3"
+  },
+  "scripts": {
+    "clean": "rimraf .next",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}

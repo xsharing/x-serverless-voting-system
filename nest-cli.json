@@ -1,22 +1,8 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/x-serverless-voting-system/src",
   "monorepo": true,
   "root": "apps/x-serverless-voting-system",
-  "compilerOptions": {
-    "webpack": true,
-    "tsConfigPath": "apps/x-serverless-voting-system/tsconfig.app.json"
-  },
   "projects": {
-    "x-serverless-voting-system": {
-      "type": "application",
-      "root": "apps/x-serverless-voting-system",
-      "entryFile": "main",
-      "sourceRoot": "apps/x-serverless-voting-system/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/x-serverless-voting-system/tsconfig.app.json"
-      }
-    },
     "user-web": {
       "type": "application",
       "root": "apps/user-web",
