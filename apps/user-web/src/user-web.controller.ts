@@ -8,10 +8,11 @@ export class UserWebController {
   @Get()
   @Render('Index')
   public index() {
-    console.debug('index');
+    console.debug('index', this.userWebService.getDbAdapterMode());
     // initial props
     return {
       title: 'Next with Nest',
+      db_adapter_mode: this.userWebService.getDbAdapterMode(),
     };
   }
 

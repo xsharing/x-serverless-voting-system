@@ -12,6 +12,13 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "paths": {}
+    "paths": {
+      "@app/app-config": [
+        "libs/app-config/src"
+      ],
+      "@app/app-config/*": [
+        "libs/app-config/src/*"
+      ]
+    }
   }
 }

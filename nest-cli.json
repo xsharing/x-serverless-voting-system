@@ -20,6 +20,18 @@
       "compilerOptions": {
         "tsConfigPath": "apps/admin-web/tsconfig.app.json"
       }
+    },
+    "app-config": {
+      "type": "library",
+      "root": "libs/app-config",
+      "entryFile": "index",
+      "sourceRoot": "libs/app-config/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/app-config/tsconfig.lib.json"
+      }
     }
+  },
+  "compilerOptions": {
+    "webpack": true
   }
 }
