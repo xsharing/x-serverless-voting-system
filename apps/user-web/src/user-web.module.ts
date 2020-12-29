@@ -5,13 +5,13 @@ import { RenderModule } from 'nest-next';
 import Next from 'next';
 import { resolve } from 'path';
 import { AppConfigModule } from '@app/app-config';
-console.log(resolve(__dirname, '../../ui'));
+console.log(resolve(__dirname, ''));
 @Module({
   imports: [
     RenderModule.forRootAsync(
       Next({
         dev: process.env.NODE_ENV !== 'production',
-        dir: resolve(__dirname, '../../ui'),
+        dir: resolve(__dirname, ''),
       }),
       {
         dev: process.env.NODE_ENV !== 'production',

@@ -9,7 +9,12 @@
       "entryFile": "main",
       "sourceRoot": "apps/user-web/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/user-web/tsconfig.app.json"
+        "tsConfigPath": "apps/user-web/tsconfig.app.json",
+        "assets": [{
+          "include": "../../ui/pages/**/*.tsx",
+          "outDir": "dist/apps/user-web/pages",
+          "watchAssets": true
+        }]
       }
     },
     "admin-web": {
@@ -18,7 +23,12 @@
       "entryFile": "main",
       "sourceRoot": "apps/admin-web/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/admin-web/tsconfig.app.json"
+        "tsConfigPath": "apps/admin-web/tsconfig.app.json",
+        "assets": [{
+          "include": "../../ui/pages/**/*.tsx",
+          "outDir": "dist/apps/admin-web/pages",
+          "watchAssets": true
+        }]
       }
     },
     "app-config": {
