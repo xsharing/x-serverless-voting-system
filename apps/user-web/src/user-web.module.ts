@@ -5,16 +5,26 @@ import { RenderModule } from 'nest-next';
 import Next from 'next';
 import { resolve } from 'path';
 import { AppConfigModule } from '@app/app-config';
-console.log(resolve(__dirname, ''));
+console.log(resolve(__dirname, ''), process.env.NODE_ENV, process.cwd());
+
+const dev = process.env.NODE_ENV !== 'production';
+const nextDir = (function () {
+  switch (process.env.NODE_ENV) {
+    case 'test':
+      return resolve(__dirname, 'ui');
+    default:
+      return resolve(__dirname, 'ui');
+  }
+})();
 @Module({
   imports: [
     RenderModule.forRootAsync(
       Next({
-        dev: process.env.NODE_ENV !== 'production',
-        dir: resolve(__dirname, ''),
+        dev,
+        dir: nextDir,
       }),
       {
-        dev: process.env.NODE_ENV !== 'production',
+        dev,
       },
     ),
     AppConfigModule,
@@ -22,4 +32,4 @@ console.log(resolve(__dirname, ''));
   controllers: [UserWebController],
   providers: [UserWebService],
 })
-export class UserWebModule {}
+export class UserWebModule { }

@@ -1,3 +1,4 @@
+import { AppConfigModule } from '@app/app-config/app-config.module';
 import { Test, TestingModule } from '@nestjs/testing';
 import { AdminWebController } from './admin-web.controller';
 import { AdminWebService } from './admin-web.service';
@@ -7,6 +8,7 @@ describe('AdminWebController', () => {
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
+      imports: [AppConfigModule],
       controllers: [AdminWebController],
       providers: [AdminWebService],
     }).compile();
@@ -14,9 +16,9 @@ describe('AdminWebController', () => {
     adminWebController = app.get<AdminWebController>(AdminWebController);
   });
 
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(adminWebController.getHello()).toBe('Hello World!');
+  describe('index', () => {
+    it('should return something', () => {
+      expect(adminWebController.index()).toBeDefined();
     });
   });
 });

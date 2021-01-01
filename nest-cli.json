@@ -10,11 +10,13 @@
       "sourceRoot": "apps/user-web/src",
       "compilerOptions": {
         "tsConfigPath": "apps/user-web/tsconfig.app.json",
-        "assets": [{
-          "include": "../../ui/pages/**/*.tsx",
-          "outDir": "dist/apps/user-web/pages",
-          "watchAssets": true
-        }]
+        "assets": [
+          {
+            "include": "ui",
+            "outDir": "dist/apps/user-web/",
+            "watchAssets": true
+          }
+        ]
       }
     },
     "admin-web": {
@@ -24,11 +26,13 @@
       "sourceRoot": "apps/admin-web/src",
       "compilerOptions": {
         "tsConfigPath": "apps/admin-web/tsconfig.app.json",
-        "assets": [{
-          "include": "../../ui/pages/**/*.tsx",
-          "outDir": "dist/apps/admin-web/pages",
-          "watchAssets": true
-        }]
+        "assets": [
+          {
+            "include": "ui",
+            "outDir": "dist/apps/admin-web/",
+            "watchAssets": true
+          }
+        ]
       }
     },
     "app-config": {
