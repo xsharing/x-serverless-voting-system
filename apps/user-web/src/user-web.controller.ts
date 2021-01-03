@@ -25,4 +25,14 @@ export class UserWebController {
       title: 'Next with Nest',
     };
   }
+
+  @Get('campaign')
+  @Render('CampaignDetail')
+  public campaign() {
+    console.debug('campaign');
+    // initial props
+    return {
+      title: 'Next with Nest',
+    };
+  }
 }

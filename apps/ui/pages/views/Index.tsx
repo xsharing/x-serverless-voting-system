@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   form: {
     width: '100%',
     borderWidth: '1px',
-    borderColor: 'black',
+    borderColor: theme.palette.primary.dark,
     borderStyle: 'solid',
   },
 }));
@@ -23,9 +23,9 @@ const IndexPage: NextPage = () => {
 
   return (
     <Container component="main" maxWidth="xs">
-      <CssBaseline />
       <div className={classes.paper}>
         <div className={classes.form}>Hello</div>
+        <Link href="/campaign">投票ページ</Link>
       </div>
     </Container>
   );
